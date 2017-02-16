@@ -79,15 +79,16 @@ void loop() {
     Message.Affiche(" Température : ",false);
     Serial.print(event.temperature);
     Message.Affiche("°C", false);
+    //Affichage séparateur
+    Message.Affiche(" - ",false);  
   }
-  //Affichage séparateur
-  Message.Affiche(" - ",false);  
+  
   //Capture des données du capteur d'humidité
   dht.humidity().getEvent(&event);
   //Si on n'a pas d'évènement on affiche un message d'erreur
   //sinon on affiche la température
   if (isnan(event.relative_humidity)) {
-    Serial.println("Lecture de l'humidité impossible !");
+    Message.Affiche("Lecture de l'humidité impossible !");
   }
   else {
     Message.Affiche("Humidité : ",false);
