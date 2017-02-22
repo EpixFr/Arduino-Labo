@@ -1,7 +1,8 @@
 //-----------------------------------------------------------
 //
 //                Test module ILS pour Arduino
-//           Interrupteur Lame Souple / Reed Switch
+//             Interrupteur Lame Souple avec LM393
+//                  Reed Switch with LM393
 //  
 //-----------------------------------------------------------
 // EpixFR - Février 2017 
